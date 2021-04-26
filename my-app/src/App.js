@@ -9,17 +9,20 @@ function App() {
             <header className="row">
                 <div>
                     <a className="website-brand" href="/">MorningStar.</a>
+
                 </div>
                 <div>
-                    <a href="/cart">Cart</a>
-                    <a href="/signin">Sign in</a>
+                    <a href="/cart">Cart <i className='fas fa-shopping-basket'></i></a>
+                    <a href="/signin">Sign in <i className='fas fa-user-circle'></i></a>
                 </div>
             </header>
 
 
 
 
-            <main>
+
+          <main>
+
                 <Route path="/product/:id" component={ProductScreen}></Route>
                 <Route path="/" component={HomeScreen} exact></Route>
             </main>
