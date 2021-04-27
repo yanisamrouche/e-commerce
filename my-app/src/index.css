@@ -203,6 +203,15 @@ a.website-brand{
 a.website-brand:hover{
   color: black;
 }
+.badge{
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 0.1rem 0.2rem;
+  font-size: 1.4rem;
+  margin-left: 0.6rem;
+}
+
 button{
   padding: 1rem;
   border-radius: 0.5rem;
