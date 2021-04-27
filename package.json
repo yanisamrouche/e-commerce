@@ -1,0 +1,29 @@
+{
+  "name": "e-commerce-website",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "amazon clone website",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch Server --exec node --experimental-modules Server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanisamrouche/e-commerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanisamrouche/e-commerce/issues"
+  },
+  "homepage": "https://github.com/yanisamrouche/e-commerce#readme",
+  "dependencies": {
+    "es6": "0.0.7",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mjs": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
