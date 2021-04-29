@@ -4,6 +4,7 @@ import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import {useSelector} from "react-redux";
 function App() {
+
   const cart = useSelector((state => state.cart))
   const {cartItems} = cart;
 
@@ -13,18 +14,17 @@ function App() {
 
             <header className="row">
                 <div>
-                    <Link className="website-brand" to="/">MorningStar.</Link>
+                    <Link className="website-brand" to="/">Store.</Link>
 
                 </div>
                 <div>
                     <Link to="/cart">
+                        Cart<i className='fas fa-shopping-basket'></i>
                         {
                             cartItems.length > 0 && (
                                 <span className="badge">{cartItems.length}</span>
                             )
                         }
-                        <br/>
-                        Cart<i className='fas fa-shopping-basket'></i>
 
                     </Link>
                     <Link to="/signin">Sign in <i className='fas fa-user-circle'></i></Link>

@@ -21,7 +21,7 @@ body{
   background: rgba(0,0,0,0.5) url("landing.jpg") no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 60vh;
   overflow: hidden;
   background-blend-mode: overlay;
   border-radius: 10px;
@@ -33,7 +33,7 @@ body{
 .wave{
   position: absolute;
   width: 100%;
-  bottom: -80px;
+  bottom: 10rem;
   color: #fff;
   opacity: 1;
 }
@@ -95,6 +95,13 @@ footer{
 .row.top{
   align-items: flex-start;
 }
+.oneline{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
 .col-2 img{
   width: 60%;
   height: 40%;
@@ -105,6 +112,8 @@ footer{
 .col-2{
   flex: 2 1 50rem;
 }
+
+
 
 /* making the links look better */
 a{
@@ -122,14 +131,16 @@ ul{
   list-style-type: none;
 }
 
+
 button{
   --c: gray;
   color: var(--c);
+  background-color: black;
   font-size: 10px;
   border: 0.1em solid var(--c);
   border-radius: 0.5em;
-  width: 20%;
-  height: 20%;
+  width: 10%;
+  height: 10%;
   text-transform: uppercase;
   font-weight: bold;
   font-family: sans-serif;
@@ -218,6 +229,11 @@ button{
 
 }
 
+select{
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
 /* making images look better */
 img{
   height: 220px;
@@ -225,7 +241,11 @@ img{
   margin: 10px;
   border-radius: 20px;
 }
-
+img.img-shoppingcart{
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+}
 
 /* card */
 .card{
@@ -234,6 +254,12 @@ img{
   border-radius: 20px;
   margin: 1rem;
 
+}
+.card-item{
+  border: 0.5rem #c0c0c0 solid;
+  background-color: white;
+  border-radius: 20px;
+  margin: 2rem;
 }
 
 img.medium:hover{
@@ -250,7 +276,10 @@ img.medium:hover:before{
 .card-body > * {
   margin-bottom:  0.5rem;
 }
-
+.item-title, .item-qty, .item-price, .item-button-del{
+  margin-top: 4rem;
+  margin-right: 1rem;
+}
 h1{
   font-size: 1.8rem;
   padding: 1rem 0;
@@ -259,6 +288,7 @@ h2{
   font-size: 1.6rem;
   padding: 1rem 0;
 }
+
 /* price */
 .price{
   font-size: 2rem;
