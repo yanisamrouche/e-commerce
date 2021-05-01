@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/yanisamrouche/e-commerce#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "es6": "0.0.7",
     "esm": "^3.2.25",
     "express": "^4.17.1",
-    "mjs": "^1.0.0"
+    "express-async-handler": "^1.1.4",
+    "mjs": "^1.0.0",
+    "mongoose": "^5.12.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

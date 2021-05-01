@@ -1,9 +1,8 @@
 const data = {
     products:[
         {
-            id: '1',
             name: 'Paul Smith',
-            category: 'suit',
+            category: 'men',
             image: '/images/product1.jpg',
             price: 120,
             countInStock: 10,
@@ -13,9 +12,9 @@ const data = {
             description: 'high quality suit'
         },
         {
-            id: '2',
+
             name: 'Ted Baker',
-            category: 'suit',
+            category: 'men',
             image: '/images/product2.jpg',
             price: 120,
             countInStock: 15,
@@ -25,9 +24,8 @@ const data = {
             description: 'high quality suit'
         },
         {
-            id: '3',
             name: 'Ralph laurant',
-            category: 'suit',
+            category: 'men',
             image: '/images/product3.jpg',
             price: 200,
             countInStock: 10,
@@ -37,19 +35,61 @@ const data = {
             description: 'high quality suit'
         },
         {
-            id: '4',
-            name: 'Paul Smith',
-            category: 'suit',
+            name: 'Zara men',
+            category: 'men',
             image: '/images/product4.jpg',
             price: 150,
             countInStock: 0,
-            brand: 'paul smith',
+            brand: 'Zara men',
             rating: '4',
             numReviews: 12,
             description: 'high quality suit'
+        },
+        {
+            name: 'Skirt set',
+            category: 'women',
+            image: '/images/product5.jpg',
+            price: 150,
+            countInStock: 0,
+            brand: 'skirt',
+            rating: '4',
+            numReviews: 12,
+            description: 'high quality '
+        },
+        {
+            name: 'Pant set',
+            category: 'women',
+            image: '/images/product6.jpg',
+            price: 150,
+            countInStock: 0,
+            brand: 'pant',
+            rating: '4',
+            numReviews: 12,
+            description: 'high quality '
+        },
+        {
+            name: 'Jacket',
+            category: 'women',
+            image: '/images/product7.jpg',
+            price: 150,
+            countInStock: 0,
+            brand: 'jacket',
+            rating: '4',
+            numReviews: 12,
+            description: 'high quality '
+        },
+        {
+            name: 'Sweat shirt',
+            category: 'women',
+            image: '/images/product8.jpg',
+            price: 150,
+            countInStock: 10,
+            brand: 'sweat',
+            rating: '4',
+            numReviews: 12,
+            description: 'high quality '
         }
     ]
-
 }
 
 export default data;
