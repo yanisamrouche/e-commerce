@@ -1,21 +1,25 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv'
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
 
-const app = express();
+dotenv.config();
 
+const app = express();
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 mongoose.connect('mongodb://localhost/projectdb',
     {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-}).then(()=>{
-    console.log("Connected to the Database. Yayzow!");
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true
+    }).then(()=>{
+    console.log("Connected to the Database. Yay!");
 })
-.catch(err => {
+    .catch(err => {
         console.log(err);
-});
+    });
 /* products & users route */
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
@@ -30,7 +34,7 @@ app.use((err, req, res, next) => {
 });
 
 
-const port = process.env.PORT || 4321;
+const port = process.env.PORT || 1235;
 
 app.listen(port, () => {
     console.log(`Server is running : http://localhost:${port}`);

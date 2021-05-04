@@ -48,7 +48,7 @@ import {Link} from "react-router-dom";
                                                             <Link to={`/product/${cartItems[x].product}`}><img className="img-shoppingcart" key={x} src={cartItems[x].image} alt={cartItems[x].name}/></Link>
                                                          </div>
                                                              <div className="item-title">
-                                                                <Link to={`/product/${cartItems[x].product}`}>{cartItems[x].name}</Link>
+                                                                <Link key={x} to={`/product/${cartItems[x].product}`}>{cartItems[x].name}</Link>
                                                              </div>
 
                                                                  <div key={x} className="item-qty" >

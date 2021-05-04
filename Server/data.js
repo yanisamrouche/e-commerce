@@ -49,8 +49,7 @@ const data = {
             rating: '4',
             numReviews: 14,
             description: 'high quality suit'
-        },
-        {
+        }, {
             name: 'Zara men',
             category: 'men',
             image: '/images/product4.jpg',
@@ -105,6 +104,7 @@ const data = {
             numReviews: 12,
             description: 'high quality '
         }
+
     ]
 
 }

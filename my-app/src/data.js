@@ -34,61 +34,7 @@ const data = {
             numReviews: 14,
             description: 'high quality suit'
         },
-        {
-            name: 'Zara men',
-            category: 'men',
-            image: '/images/product4.jpg',
-            price: 150,
-            countInStock: 0,
-            brand: 'Zara men',
-            rating: '4',
-            numReviews: 12,
-            description: 'high quality suit'
-        },
-        {
-            name: 'Skirt set',
-            category: 'women',
-            image: '/images/product5.jpg',
-            price: 150,
-            countInStock: 0,
-            brand: 'skirt',
-            rating: '4',
-            numReviews: 12,
-            description: 'high quality '
-        },
-        {
-            name: 'Pant set',
-            category: 'women',
-            image: '/images/product6.jpg',
-            price: 150,
-            countInStock: 0,
-            brand: 'pant',
-            rating: '4',
-            numReviews: 12,
-            description: 'high quality '
-        },
-        {
-            name: 'Jacket',
-            category: 'women',
-            image: '/images/product7.jpg',
-            price: 150,
-            countInStock: 0,
-            brand: 'jacket',
-            rating: '4',
-            numReviews: 12,
-            description: 'high quality '
-        },
-        {
-            name: 'Sweat shirt',
-            category: 'women',
-            image: '/images/product8.jpg',
-            price: 150,
-            countInStock: 10,
-            brand: 'sweat',
-            rating: '4',
-            numReviews: 12,
-            description: 'high quality '
-        }
+
     ]
 }
 
