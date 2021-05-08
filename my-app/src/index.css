@@ -221,7 +221,9 @@ button{
   border-radius: 0.5rem;
 
 }
-
+button.small {
+  width: 50%;
+}
 select{
   padding: 1rem;
   border-radius: 0.5rem;
@@ -302,7 +304,7 @@ h2{
 }
 
 .success {
-  color: seagreen;
+  color: green;
 }
 .danger{
   color: red;
@@ -321,6 +323,11 @@ h2{
   color: red;
   background-color: white;
 }
+.alert-success{
+  color: green;
+  background-color: white;
+}
+
 /* From */
 .form{
   max-width: 60rem;
@@ -402,4 +409,19 @@ h2{
   color: black;
   background-color: seagreen;
 
+}
+/* table */
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  background-color: whitesmoke;
+
+}
+.table td, .table th{
+  text-align: left;
+  border: 0.1rem  solid gray;
+  padding: 0.5rem;
+}
+.table button{
+  margin: 0 0.2rem;
 }
