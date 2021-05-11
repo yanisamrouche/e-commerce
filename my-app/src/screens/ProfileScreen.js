@@ -59,11 +59,11 @@ export default function ProfileScreen() {
                             {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
                             {successUpdate && <MessageBox variant="success">Profile updated successfully</MessageBox>}
                             <div>
-                                <label htmlFor="name">Name</label>
+                                <label htmlFor="name">Name</label> <br/>
                                 <input id="name" type="text" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)}/>
                             </div>
                             <div>
-                                <label htmlFor="email">Email</label>
+                                <label htmlFor="email">Email</label> <br/>
                                 <input id="email" type="text" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                             </div>
                             <div>

@@ -332,12 +332,16 @@ h2{
 .form{
   max-width: 60rem;
   margin: 2rem auto;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 5px 15px gray;
-  border-top: 1px solid rgba(255,255,255,0.3) ;
+  border-top: 20px solid rgba(255,255,255,0.3) ;
   border-left: 20px solid rgba(255,255,255,0.3) ;
+  border-bottom: 20px solid rgba(255,255,255,0.3) ;
+
   backdrop-filter: blur(5px);
   transform-style: preserve-3d ;
+  font-size: 25px;
+  background-color: rgba(200,200,200, 0.5);
 
 
 }
@@ -351,21 +355,30 @@ h2{
   font-size: 20px;
 }
 .form input{
+
   outline: none;
   border: none;
   height: 40px;
   width: 82%;
   background-color: whitesmoke;
   color: black;
-  box-shadow: 0 0 10px gray inset;
-  font-size: 17px;
-  letter-spacing: 1px;
+  box-shadow: 2px 2px 2px gray inset;
   border-radius: 10px;
+  font-family: 'Arial', cursive;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+
+
 }
 .form button{
+
   width: 50%;
   height: 50%;
-  transform: translateX(130px);
+  transform: translateX(130px) translateY(3px);
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 /* dropdown */
 .dropdown{
@@ -398,8 +411,6 @@ h2{
   flex: 1;
   padding: 1rem;
   font-family: cursive;
-
-
 }
 
 .checkout-steps > div.active{
@@ -408,8 +419,8 @@ h2{
   border-radius: 20px;
   color: black;
   background-color: seagreen;
-
 }
+
 /* table */
 .table{
   width: 100%;
