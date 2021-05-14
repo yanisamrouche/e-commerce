@@ -88,7 +88,6 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     }
 }
 
-
 export const deleteProduct = (productId) => async (dispatch, getState) => {
     dispatch({type: PRODUCT_DELETE_REQUEST, payload: productId})
     const { userSignin : {userInfo}} = getState()

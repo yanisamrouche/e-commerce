@@ -16,8 +16,12 @@ import PrivateRoute from "./components/PrivateRoute";
 import AdminRoute from "./components/AdminRoute";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
-function App() {
+import useAlan from "./AlanAI/useAlan";
+import OrderListScreen from "./screens/OrderListScreen";
+import UserListScreen from "./screens/UserListScreen";
 
+function App() {
+  useAlan()
   const cart = useSelector((state => state.cart))
   const {cartItems} = cart;
   const userSignin = useSelector(state => state.userSignin)
@@ -36,6 +40,7 @@ function App() {
                     <Link className="website-brand" to="/">Store.</Link>
 
                 </div>
+
                 <div>
                     <Link to="/cart">
                         Cart<i className='fas fa-shopping-basket'></i>
@@ -101,10 +106,13 @@ function App() {
                 <Route path="/shipping" component={ShippingAddressScreen} ></Route>
                 <Route path="/payment" component={PaymentMethodScreen} ></Route>
                 <Route path="/placeorder" component={PlaceOrderScreen} ></Route>
+
                 <Route path="/order/:id" component={OrderScreen} ></Route>
                 <Route path="/orderhistory" component={OrderHistoryScreen} ></Route>
                 <PrivateRoute path="/profile" component={ProfileScreen} ></PrivateRoute>
                 <AdminRoute path="/productlist"component={ProductListScreen}></AdminRoute>
+                <AdminRoute path="/orderlist" component={OrderListScreen} ></AdminRoute>
+                <AdminRoute path="/userlist" component={UserListScreen} ></AdminRoute>
 
 
                 <Route path="/" component={HomeScreen} exact></Route>

@@ -8,12 +8,19 @@ import {
 } from "./reducers/productReducers";
 import {cartReducer} from "./reducers/cartReducers";
 import {
-    userDetailsReducer,
+    userDeleteReducer,
+    userDetailsReducer, userListReducer,
     userRegisterReducer,
     userSigninReducer,
     userUpdateProfileReducer
 } from "./reducers/userReducers";
-import {orderCreateReducer, orderDetailsReducer, orderMineListReducer, orderPayReducer} from "./reducers/orderReducers";
+import {
+    orderCreateReducer, orderDeleteReducer, orderDeliverReducer,
+    orderDetailsReducer,
+    orderListReducer,
+    orderMineListReducer,
+    orderPayReducer
+} from "./reducers/orderReducers";
 
 const initialState = {
 
@@ -51,7 +58,12 @@ const reducer = combineReducers({
     userUpdateProfile: userUpdateProfileReducer,
     productCreate: productCreateReducer,
     productUpdate: productUpdateReducer,
-    productDelete: productDeleteReducer
+    productDelete: productDeleteReducer,
+    orderList: orderListReducer,
+    orderDelete: orderDeleteReducer,
+    orderDeliver: orderDeliverReducer,
+    userList: userListReducer,
+    userDelete: userDeleteReducer,
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

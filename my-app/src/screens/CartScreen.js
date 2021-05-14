@@ -19,7 +19,7 @@ import {Link} from "react-router-dom";
          }
      },[dispatch,productId, qty])
 
-     const removeFromCartHandler = (id) => {
+      const removeFromCartHandler = (id) => {
          dispatch(removeFromCart(id))
      }
 
@@ -63,7 +63,7 @@ import {Link} from "react-router-dom";
                                                                  </div>
                                                              <br/>
                                                              <div className="item-price">{cartItems[x].price}$</div>
-                                                             <button className="item-button-del" type="button" onClick={() => removeFromCartHandler(cartItems[x].product)}>
+                                                             <button id="delete-btn" className="item-button-del" type="button" onClick={() => removeFromCartHandler(cartItems[x].product)}>
                                                                  Delete
                                                                  <span></span><span></span><span></span><span></span>
 

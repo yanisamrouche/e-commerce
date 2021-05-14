@@ -5,6 +5,7 @@ import expressAsyncHandler from "express-async-handler";
 import bcrypt from 'bcryptjs'
 import {generateToken} from "../utils.js";
 import {isAuth} from "../utils.js";
+import {isAdmin} from "../utils.js";
 
 const userRouter = express.Router()
 
@@ -81,4 +82,26 @@ userRouter.put('/profile',isAuth, expressAsyncHandler(async (req, res)=>{
     }
 
 }))
+
+userRouter.get('/',
+    isAuth,
+    isAdmin,
+    expressAsyncHandler(async (req, res)=>{
+        const users = await User.find({});
+        res.send(users)
+    }))
+
+userRouter.delete('/:id',
+    isAuth,
+    isAdmin,
+    expressAsyncHandler(async (req, res) => {
+        const user = await User.findById(req.params.id);
+        if(user){
+            const deleteUser = await user.remove();
+            res.send({ message: 'User Deleted', user: deleteUser });
+        } else {
+            res.status(404).send({ message: 'User Not Found' });
+        }
+
+    }))
 export default userRouter;

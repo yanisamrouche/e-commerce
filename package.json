@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/yanisamrouche/e-commerce#readme",
   "dependencies": {
+    "@alan-ai/alan-sdk-web": "^1.8.26",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "es6": "0.0.7",
     "esm": "^3.2.25",
     "express": "^4.17.1",

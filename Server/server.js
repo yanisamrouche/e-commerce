@@ -4,12 +4,14 @@ import dotenv from 'dotenv'
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
 import orderRouter from "./routers/orderRouter.js";
-
+import bodyParser from 'body-parser';
 dotenv.config();
 
 const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 mongoose.connect('mongodb://localhost/projectdb',
     {
         useNewUrlParser: true,

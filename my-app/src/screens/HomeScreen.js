@@ -65,8 +65,7 @@ function HomeScreen() {
 
                     {
                         products.map((product) => !activeCategory || activeCategory === product.category ? (
-
-                            <Product key={product.id} product = {product} />
+                            <Product key={product._id} product = {product} />
                         ): null)
                     }
                     </div>
