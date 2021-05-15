@@ -3,16 +3,20 @@ import {useEffect} from "react";
 import {deleteUser, listUsers} from "../actions/userActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+import { USER_DETAILS_RESET} from "../constants/userConstants";
 
-export default function UserListScreen() {
+export default function UserListScreen(props) {
     const userList = useSelector(state => state.userList);
     const {loading, e , users} = userList;
 
     const userDelete = useSelector(state => state.userDelete)
     const {loading: loadingDelete, e: errorDelete, success: successDelete} = userDelete
+
     const dispatch = useDispatch();
+
     useEffect(()=>{
         dispatch(listUsers())
+        dispatch({type: USER_DETAILS_RESET})
     }, [dispatch, successDelete])
     const deleteUserHandler = (user) => {
         dispatch(deleteUser(user._id))
@@ -44,7 +48,7 @@ export default function UserListScreen() {
                                 <td>{user.email}</td>
                                 <td>{user.isAdmin ? 'YES' : 'NO'}</td>
                                 <td>
-                                    <button className="primary block">Edit</button>
+                                    <button className="primary block" type="button" onClick={()=>props.history.push(`/user/${user._id}/edit`)}>Edit</button>
                                 </td>
                                 <td>
                                     <button className="primary block" onClick={()=> deleteUserHandler(user)}>Delete</button>
