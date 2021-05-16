@@ -20,6 +20,8 @@ import useAlan from "./AlanAI/useAlan";
 import OrderListScreen from "./screens/OrderListScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
+import SearchBox from "./components/SearchBox";
+import SearchScreen from "./screens/SearchScreen"
 
 function App() {
   useAlan()
@@ -40,6 +42,12 @@ function App() {
                 <div>
                     <Link className="website-brand" to="/">Store.</Link>
 
+                </div>
+
+                <div>
+                   <Route render={({history}) => (
+                       <SearchBox history={history}></SearchBox>
+                   )}></Route>
                 </div>
 
                 <div>
@@ -101,15 +109,14 @@ function App() {
                 <Route path="/cart/:id?" component={CartScreen}></Route>
                 <Route path="/product/:id" component={ProductScreen} exact></Route>
                 <Route path="/product/:id/edit" component={ProductEditScreen} exact></Route>
-
                 <Route path="/signin" component={SigninScreen}></Route>
                 <Route path="/register" component={RegisterScreen}></Route>
                 <Route path="/shipping" component={ShippingAddressScreen} ></Route>
                 <Route path="/payment" component={PaymentMethodScreen} ></Route>
                 <Route path="/placeorder" component={PlaceOrderScreen} ></Route>
-
                 <Route path="/order/:id" component={OrderScreen} ></Route>
                 <Route path="/orderhistory" component={OrderHistoryScreen} ></Route>
+                <Route path="/search/name/:name?" component={SearchScreen} exact></Route>
                 <PrivateRoute path="/profile" component={ProfileScreen} ></PrivateRoute>
                 <AdminRoute path="/productlist"component={ProductListScreen}></AdminRoute>
                 <AdminRoute path="/orderlist" component={OrderListScreen} ></AdminRoute>
@@ -125,9 +132,7 @@ function App() {
                 <div>
                      <a href="http://copyright.be" target="_blank">Copyright © 2020-2021</a>
                 </div>
-                <div>
-                    <a href="ContactUs.html" target="_blank">Contact Us </a>
-                </div>
+
 
             </footer>
         </div>

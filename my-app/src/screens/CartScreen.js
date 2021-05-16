@@ -93,7 +93,7 @@ import {Link} from "react-router-dom";
                              </h2>
                          </li>
                          <li>
-                             <button className="primary block" type="button" onClick={checkoutHandler} disabled={cartItems.length === 0}>
+                             <button id="checkout-btn" className="primary block" type="button" onClick={checkoutHandler} disabled={cartItems.length === 0}>
                                  Checkout
                                  <span></span><span></span><span></span><span></span>
                              </button>

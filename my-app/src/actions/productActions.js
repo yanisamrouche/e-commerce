@@ -39,8 +39,8 @@ export const detailsProduct = (productId) => async (dispatch)=>{
     }catch (e) {
         dispatch({type: PRODUCT_DETAILS_FAIL,
             payload: e.response && e.response.data.message ?
-            e.response.data.message
-        :   e.message})
+                e.response.data.message
+                :   e.message})
     }
 }
 
@@ -66,7 +66,7 @@ export const createProduct = () => async (dispatch, getState) => {
                 : error.message;
         dispatch({ type: PRODUCT_CREATE_FAIL, payload: message });
     }
-    
+
 }
 
 export const updateProduct = (product) => async (dispatch, getState) => {

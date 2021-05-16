@@ -117,8 +117,7 @@ userRouter.delete('/:id',
         } else {
             res.status(404).send({ message: 'User Not Found' });
         }
-
-    }))
+}))
 
 
 

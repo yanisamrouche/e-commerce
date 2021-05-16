@@ -19,12 +19,13 @@ export default function PaymentMethodScreen(props) {
     return (
         <div>
             <CheckOutSteps step1 step2 step3 ></CheckOutSteps>
-            <form className="form" onSubmit={submitHandler}>
+            <form className="form">
                 <div>
                     <h1>Payment Method</h1>
                 </div>
-                <div>
-                    <div>
+                <div >
+                    <div className="checkPay">
+                        <label htmlFor="paypal">PayPal</label>
                         <input
                             type="radio"
                             id="paypal"
@@ -32,24 +33,10 @@ export default function PaymentMethodScreen(props) {
                             name="paymentMethod"
                             required checked
                             onChange={(e) => setPaymentMethod(e.target.value)}></input>
-                        <label htmlFor="paypal">PayPal</label>
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <input
-                            type="radio"
-                            id="stripe"
-                            value="Stripe"
-                            name="paymentMethod"
-                            required
-                            onChange={(e) => setPaymentMethod(e.target.value)}></input>
-                        <label htmlFor="stripe">Stripe</label>
-                    </div>
-                </div>
-
-                <div>
-                    <button className="primary" type="submit">
+                    <button id="pay-btn" className="primary" type="button" onClick={submitHandler}>
                         Continue
                         <span></span><span></span><span></span><span></span>
 

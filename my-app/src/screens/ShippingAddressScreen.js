@@ -28,7 +28,7 @@ export default function ShippingAddressScreen(props) {
     return(
             <div>
                 <CheckOutSteps step1 step2></CheckOutSteps>
-                <form className="form" onSubmit={sumbitHandler}>
+                <form className="form" >
                     <div>
                         <h1>Shipping Address</h1>
                     </div>
@@ -54,7 +54,7 @@ export default function ShippingAddressScreen(props) {
                     </div>
                     <div>
                         <label/>
-                        <button className="primary" type="sumbit">
+                        <button id="ship-btn" className="primary" type="button" onClick={sumbitHandler}>
                             Continue
                             <span></span><span></span><span></span><span></span>
                         </button>

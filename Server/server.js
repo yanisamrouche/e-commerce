@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-mongoose.connect('mongodb://localhost/projectdb',
+mongoose.connect('mongodb+srv://yanis_amr:EcommerceProject@cluster0.flupe.mongodb.net/projectdb?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -47,7 +47,7 @@ app.use((err, req, res, next) => {
 });
 
 
-const port = process.env.PORT || 1237;
+const port = process.env.PORT || 1238;
 
 app.listen(port, () => {
     console.log(`Server is running : http://localhost:${port}`);
