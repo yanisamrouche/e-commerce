@@ -11,6 +11,7 @@ export default function ProductEditScreen(props) {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [image, setImage] = useState('');
+    const [gender, setGender] = useState('');
     const [category, setCategory] = useState('');
     const [countInStock, setCountInStock] = useState('');
     const [brand, setBrand] = useState('');
@@ -38,6 +39,7 @@ export default function ProductEditScreen(props) {
             setName(product.name);
             setPrice(product.price);
             setImage(product.image);
+            setGender(product.gender);
             setCategory(product.category);
             setCountInStock(product.countInStock);
             setBrand(product.brand);
@@ -54,6 +56,7 @@ export default function ProductEditScreen(props) {
                 name,
                 price,
                 image,
+                gender,
                 category,
                 brand,
                 countInStock,
@@ -146,6 +149,18 @@ export default function ProductEditScreen(props) {
                                 <MessageBox variant="danger">{errorUpload}</MessageBox>
                             )}
                         </div>
+
+                        <div>
+                            <label htmlFor="gender">Gender</label><br/>
+                            <input
+                                id="gender"
+                                type="text"
+                                placeholder="Enter gender"
+                                value={gender}
+                                onChange={(e) => setGender(e.target.value)}
+                            ></input>
+                        </div>
+
                         <div>
                             <label htmlFor="category">Category</label><br/>
                             <input

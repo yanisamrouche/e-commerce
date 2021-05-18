@@ -1,14 +1,15 @@
-export default function Categories(props){
+export default function Gender(props){
 
-    const {setActiveCategory, categories, activeCategory} = props;
+    const {setActiveGender, genders, activeGender} = props;
     return (
         <div className="row">
+
             <br/>
             <select
-                value={activeCategory}
-                onChange={(e) => setActiveCategory(e.target.value)}>
+                value={activeGender}
+                onChange={(e) => setActiveGender(e.target.value)}>
                 <option value=''>-----</option>
-                {categories.map((cat)=>(
+                {genders.map((cat)=>(
                     <option key={cat} value={cat}>{cat}</option>
                 ))}
             </select>

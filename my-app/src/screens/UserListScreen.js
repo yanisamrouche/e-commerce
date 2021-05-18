@@ -48,7 +48,10 @@ export default function UserListScreen(props) {
                                 <td>{user.email}</td>
                                 <td>{user.isAdmin ? 'YES' : 'NO'}</td>
                                 <td>
-                                    <button className="primary block" type="button" onClick={()=>props.history.push(`/user/${user._id}/edit`)}>Edit</button>
+                                    <button className="primary block" type="button" onClick={()=> {
+                                        props.history.push(`/user/${user._id}/edit`)
+                                        document.location.href = `/user/${user._id}/edit`
+                                    }}>Edit</button>
                                 </td>
                                 <td>
                                     <button className="primary block" onClick={()=> deleteUserHandler(user)}>Delete</button>

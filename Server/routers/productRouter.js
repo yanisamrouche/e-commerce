@@ -40,6 +40,7 @@ productRouter.post('/', isAuth, isAdmin, expressAsyncHandler(async (req, res)=>{
         name: 'empty name ' + Date.now(),
         image: '/images/empty.jpg',
         price: 0,
+        gender: 'empty gender',
         category: 'empty category',
         brand: 'empty brand',
         countInStock: 0,
@@ -59,6 +60,7 @@ productRouter.put('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) 
         product.name = req.body.name;
         product.price = req.body.price;
         product.image = req.body.image;
+        product.gender = req.body.gender;
         product.category = req.body.category;
         product.brand = req.body.brand;
         product.countInStock = req.body.countInStock;

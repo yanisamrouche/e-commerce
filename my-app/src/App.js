@@ -106,11 +106,11 @@ function App() {
 
 
             <main>
-                <Route path="/cart/:id?" component={CartScreen}></Route>
+                <Route path="/cart/:id?" component={CartScreen} ></Route>
                 <Route path="/product/:id" component={ProductScreen} exact></Route>
                 <Route path="/product/:id/edit" component={ProductEditScreen} exact></Route>
-                <Route path="/signin" component={SigninScreen}></Route>
-                <Route path="/register" component={RegisterScreen}></Route>
+                <Route path="/signin" component={SigninScreen} ></Route>
+                <Route path="/register" component={RegisterScreen} ></Route>
                 <Route path="/shipping" component={ShippingAddressScreen} ></Route>
                 <Route path="/payment" component={PaymentMethodScreen} ></Route>
                 <Route path="/placeorder" component={PlaceOrderScreen} ></Route>
@@ -122,8 +122,6 @@ function App() {
                 <AdminRoute path="/orderlist" component={OrderListScreen} ></AdminRoute>
                 <AdminRoute path="/userlist" component={UserListScreen} ></AdminRoute>
                 <AdminRoute path="/user/:id/edit" component={UserEditScreen} ></AdminRoute>
-
-
                 <Route path="/" component={HomeScreen} exact></Route>
 
             </main>

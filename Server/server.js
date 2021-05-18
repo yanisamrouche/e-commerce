@@ -47,7 +47,7 @@ app.use((err, req, res, next) => {
 });
 
 
-const port = process.env.PORT || 1238;
+const port = process.env.PORT || 1240;
 
 app.listen(port, () => {
     console.log(`Server is running : http://localhost:${port}`);

@@ -35,7 +35,7 @@ export default function ProductListScreen(props){
         if(successDelete){
             dispatch({type: PRODUCT_DELETE_RESET});
         }
-        dispatch(listProducts());
+        dispatch(listProducts({}));
 
     },[createdProduct,dispatch, props.history, successCreate, successDelete])
 
@@ -54,7 +54,7 @@ export default function ProductListScreen(props){
         <div>
             <div className="row">
                 <h1>Products</h1>
-                <button type="button"  onClick={createHandler}>
+                <button className="add-btn" type="button"  onClick={createHandler}>
                     add product
                     <span></span><span></span><span></span><span></span>
                 </button>
@@ -74,6 +74,7 @@ export default function ProductListScreen(props){
                                     <th>ID</th>
                                     <th>NAME</th>
                                     <th>PRICE</th>
+                                    <th>GENDER</th>
                                     <th>CATEGORY</th>
                                     <th>BRAND</th>
                                     <th>STOCK</th>
@@ -86,6 +87,7 @@ export default function ProductListScreen(props){
                                     <td>{product._id}</td>
                                     <td>{product.name}</td>
                                     <td>{product.price}</td>
+                                    <td>{product.gender}</td>
                                     <td>{product.category}</td>
                                     <td>{product.brand}</td>
                                     <td>{product.countInStock}</td>

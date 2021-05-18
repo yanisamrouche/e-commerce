@@ -221,6 +221,9 @@ button{
   border-radius: 0.5rem;
 
 }
+.add-btn{
+  margin-right: 13rem;
+}
 button.small {
   width: 50%;
 }
@@ -424,7 +427,6 @@ h2{
 /* table */
 .table{
   width: 100%;
-  border-collapse: collapse;
   background-color: whitesmoke;
 
 }
