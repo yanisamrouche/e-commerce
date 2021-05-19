@@ -83,8 +83,7 @@ function HomeScreen() {
                     <div className="row centre">
 
                     {
-                        products.map((product) => ((!activeCategory && !activeGender) || (!activeCategory || activeCategory === product.category)) &&
-                        ((!activeCategory && !activeGender) || (!activeGender || activeGender === product.gender))? (
+                        products.map((product) => ((!activeCategory && !activeGender) || (!activeCategory || activeCategory === product.category)) && ((!activeCategory && !activeGender) || (!activeGender || activeGender === product.gender))? (
                             <Product key={product._id} product = {product} />
                         ): null)
                     }
