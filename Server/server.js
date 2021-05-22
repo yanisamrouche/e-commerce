@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-mongoose.connect('mongodb+srv://yanis_amr:EcommerceProject@cluster0.flupe.mongodb.net/projectdb?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
