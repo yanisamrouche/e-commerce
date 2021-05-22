@@ -3,8 +3,8 @@
 
 # 1) Clone repo : 
 
-$ git clone git@github.com:yanisamrouche/e-commerce.git
-$ cd e-commerce
+    $ git clone git@github.com:yanisamrouche/e-commerce.git
+    $ cd e-commerce
 
 # 2) Configurer MongoDB : 
  
@@ -20,17 +20,17 @@ $ cd e-commerce
  PS : le projet marche sur Atlas Cloud MongoDB   
  
  # 3) Lancez d'abord le serveur : 
- Lancez dans un terminal les commandes suivantes : 
- $ cd Server
- $ npm install
- $ npm start
+    Lancez dans un terminal les commandes suivantes : 
+    $ cd Server
+    $ npm install
+    $ npm start
  
  
  # 4) Lancez l'application : 
- Lancez dans un nouveau terminal les commandes suivantes : 
- $ cd my-app
- $ npm install
- $ npm start
+    Lancez dans un nouveau terminal les commandes suivantes : 
+    $ cd my-app
+    $ npm install
+    $ npm start
  
  
  # 5) insérez les utilisateurs et les produits dans la bdd :
