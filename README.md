@@ -1,5 +1,4 @@
 # e-commerce
-# Exécuter localement
 
 # 1) Clone repo : 
 
