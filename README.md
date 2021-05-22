@@ -38,13 +38,14 @@
     (Ce lien affiche les utilisateurs sous format JSON avec l'email de l'admin et son mot de passe)
     -lancez sur Chrome le lien suivant : http://localhost:1241/api/products/seed
     (Ce lien permet de créer 8 articles)
+    1241 : le port du serveur
     
  # 6) Pour lancer l'application :
      -lancez sur Chrome le lien suivant : http://localhost:3000
-     - authentification au tant que Admin : 
-     http://localhost:3000/signin 
-     entrer l'email et le mot de passe de l'admin 
-     cliquez sur 'Sign in'
+     - authentification en tant qu'admin : 
+       http://localhost:3000/signin 
+       entrer l'email et le mot de passe de l'admin 
+       cliquez sur 'Sign in'
     
     
  
