@@ -13,6 +13,7 @@ export default function ProductEditScreen(props) {
     const [image, setImage] = useState('');
     const [gender, setGender] = useState('');
     const [category, setCategory] = useState('');
+    const [rating,setRating] = useState('');
     const [countInStock, setCountInStock] = useState('');
     const [brand, setBrand] = useState('');
     const [description, setDescription] = useState('');
@@ -41,6 +42,7 @@ export default function ProductEditScreen(props) {
             setImage(product.image);
             setGender(product.gender);
             setCategory(product.category);
+            setRating(product.rating);
             setCountInStock(product.countInStock);
             setBrand(product.brand);
             setDescription(product.description);
@@ -58,6 +60,7 @@ export default function ProductEditScreen(props) {
                 image,
                 gender,
                 category,
+                rating,
                 brand,
                 countInStock,
                 description,
@@ -170,6 +173,16 @@ export default function ProductEditScreen(props) {
                                 value={category}
                                 onChange={(e) => setCategory(e.target.value)}
                             ></input>
+                        </div>
+                        <div>
+                             <label htmlFor="rating">Rating</label><br/>
+                             <input
+                                 id="rating"
+                                 type="text"
+                                 placeholder="Enter rating"
+                                 value={rating}
+                                 onChange={(e) => setRating(e.target.value)}
+                                 ></input>
                         </div>
                         <div>
                             <label htmlFor="brand">Brand</label><br/>

@@ -44,7 +44,7 @@ productRouter.post('/', isAuth, isAdmin, expressAsyncHandler(async (req, res)=>{
         category: 'empty category',
         brand: 'empty brand',
         countInStock: 0,
-        rating: 0,
+        rating: 5,
         numReviews: 0,
         description: 'empty description',
 
@@ -62,6 +62,7 @@ productRouter.put('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) 
         product.image = req.body.image;
         product.gender = req.body.gender;
         product.category = req.body.category;
+        product.rating = req.body.rating;
         product.brand = req.body.brand;
         product.countInStock = req.body.countInStock;
         product.description = req.body.description;

@@ -7,7 +7,7 @@ export default function Categories(props){
             <select
                 value={activeCategory}
                 onChange={(e) => setActiveCategory(e.target.value)}>
-                <option value=''>-----</option>
+                <option value=''>All categories</option>
                 {categories.map((cat)=>(
                     <option key={cat} value={cat}>{cat}</option>
                 ))}

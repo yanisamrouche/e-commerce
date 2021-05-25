@@ -8,7 +8,7 @@ export default function Gender(props){
             <select
                 value={activeGender}
                 onChange={(e) => setActiveGender(e.target.value)}>
-                <option value=''>-----</option>
+                <option value=''>Men & Women</option>
                 {genders.map((cat)=>(
                     <option key={cat} value={cat}>{cat}</option>
                 ))}
